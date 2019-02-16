@@ -1,24 +1,66 @@
-
 .container {
-	max-width: 960px;
-	margin: 0 auto;
+  max-width: 960px;
+  margin: 0 auto;
 }
 
+.splice-wrap {
+  overflow: hidden;
+  position: relative;
+}
 
 .module {
-	&:last-child {
-		margin-bottom: 0;
-	}
+  &:last-child {
+    margin-bottom: 0;
+  }
 
-	&.parallax {
-		height: 600px;
-		background-position: 50% 50%;
-		background-repeat: no-repeat;
-		background-attachment: fixed;
-		background-size: cover;
-	}
+  &.parallax {
+    height: 600px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    overflow: hidden;
+  }
 
-	&.parallax {
-		background-image: url("../images/office.jpg");
-	}
+  &.parallax1 {
+    background-image: url("../images/office.jpg");
+  }
+  &.parallax2 {
+    background-image: url("../images/true_depth1.jpg");
+  }
+
+  .container-splice {
+    height: 10px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+
+    margin: 0 auto;
+    overflow: hidden;
+    //-webkit-animation: height 2s ease-in;
+    //perspective: 1000px;
+
+    .rect {
+      height: 10px;
+      background-image: url("../images/hero.jpg");
+      background-size: cover;
+      background-position: 50% 70%;
+      background-repeat: no-repeat;
+      -webkit-animation: scale 60s infinite;
+
+      @-webkit-keyframes scale {
+        0% {
+          -webkit-transform: scale(1.2);
+        }
+        50% {
+          -webkit-transform: scale(1.5);
+        }
+        100% {
+          -webkit-transform: scale(1.2);
+        }
+      }
+    }
+
+  }
 }

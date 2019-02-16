@@ -1,0 +1,63 @@
+.services {
+  flex-direction: row;
+
+  div {
+    text-align: center;
+    width: calc(100% / 4);
+    padding: 5px;
+
+    p {
+      min-height: 100px;
+    }
+
+    @include respond-to(middleSmartphone){
+      width: calc(100% / 2);
+    }
+  }
+  .icon-chat {
+    -webkit-animation: scale-infinited  3s infinite;
+  }
+
+  .icon-dollar {
+    -webkit-animation: rotate 1s infinite;
+  }
+
+  .icon-setup {
+    -webkit-animation: opacity 1s infinite;
+  }
+
+  .icon-shipping {
+    -webkit-animation: translate .5s infinite;
+  }
+
+  @-webkit-keyframes rotate {
+    from { transform: rotate(0deg)}
+    to {transform: rotate(360deg)}
+
+  }
+
+  @-webkit-keyframes scale-infinited {
+    0% { transform: scale(1)}
+    50% {transform: scale(0.5)}
+    100% {transform: scale(1)}
+
+  }
+
+  @-webkit-keyframes opacity {
+    0% { opacity: 1}
+    50% {opacity: .5}
+    100% {opacity: 1}
+
+  }
+
+  @-webkit-keyframes translate {
+    0% { transform: translateX(0)}
+    25% {transform: translateX(-5px)}
+    50% {transform: translateX(0)}
+    75% {transform: translateX(5px)}
+    100% {transform: translateX(0)}
+
+
+  }
+
+}

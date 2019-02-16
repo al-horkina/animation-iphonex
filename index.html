@@ -8,7 +8,7 @@
 <body>
 
 
-<header class="flex row space-between inner-layout">
+<header class="flex row space-between inner-layout ">
 
     <div class="logo flex column center">
         <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" width="111" height="19">
@@ -46,14 +46,23 @@
 </header>
 <main>
 
-    <section class="greeting inner-layout">
+    <section class="description greeting inner-layout">
         <h1>Lorem ipsum dolor sit amet.</h1>
-        <div class="greeting-motion">
-            <img src="frontend/images/a12_screen_image_1_medium_2x.png" alt="">
-        </div>
-        <div class="greeting-about">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus asperiores cupiditate exercitationem
-                mollitia nihil odio officia quidem quod veniam vitae.</p>
+        <div class="translate-wrap">
+            <div class="greeting-motion">
+                <img src="frontend/images/a12_screen_image_1_medium_2x.png" alt="">
+            </div>
+            <div class="greeting-about">
+                <div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                </div>
+                <div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                </div>
+                <div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -63,29 +72,45 @@
 
     </section>
 
-    <section class="module parallax">
+    <section class="module parallax parallax1">
         <div class="container">
             <h1>Move It</h1>
         </div>
     </section>
 
 
-    <section class="flex row space-around inner-layout">
+    <section class="flex row space-around inner-layout services">
         <div>
             <p>Lorem ipsum dolor sit amet.</p>
-            <img src="frontend/images/chat.svg" alt="">
+            <img class="icon-chat" src="frontend/images/chat.svg" alt="">
         </div>
         <div>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-            <img src="frontend/images/dollar.svg" alt="">
+            <img class="icon-dollar" src="frontend/images/dollar.svg" alt="">
         </div>
         <div>
             <p>Lorem ipsum dolor sit.</p>
-            <img src="frontend/images/setup.svg" alt="">
+            <img class="icon-setup" src="frontend/images/setup.svg" alt="">
         </div>
         <div>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, nobis!</p>
-            <img src="frontend/images/shipping.svg" alt="">
+            <img class="icon-shipping" src="frontend/images/shipping.svg" alt="">
+        </div>
+    </section>
+
+    <section class="module parallax parallax2">
+        <div class="container">
+            <h1>Move It</h1>
+        </div>
+    </section>
+
+    <section class="splice-wrap">
+
+        <div class="module parallax parallax2">
+            <!--<h3>Lorem ipsum dolor sit amet, consectetur.</h3>-->
+            <div class="container-splice">
+                <div class="rect"></div>
+            </div>
         </div>
     </section>
 

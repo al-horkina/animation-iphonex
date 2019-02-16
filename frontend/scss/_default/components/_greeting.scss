@@ -1,8 +1,15 @@
 .greeting {
+	overflow: hidden;
 	background: #e9e2d9;
 	position: relative;
-	-webkit-animation: transforma .2s 5s linear;
-	animation-fill-mode: forwards;
+	/*-webkit-animation: transforma .2s 5s linear;
+	animation-fill-mode: forwards;*/
+
+	.translate-wrap {
+		-webkit-animation: transform-greeting 2s 3s ease-in;
+		animation-fill-mode: forwards;
+
+	}
 
 
 	.greeting-motion {
@@ -16,27 +23,75 @@
 			width: 100%;
 			height: auto;
 		}
+
+		-webkit-animation: scale 2s linear;
 	}
 
 	.greeting-about {
 		background: #f7f7f7;
-		width: 400px;
+		width: 360px;
 		padding: 40px;
 		position: absolute;
 		top: 150px;
 		left: 0;
 		z-index: 1;
 		transform: translateX(-400px);
+		box-sizing: border-box;
+
+		div {
+			background: #f7f7f7;
+			margin-bottom: 10px;
+			padding: 40px;
+			border-radius: 3px;
+			opacity: 0;
+			-webkit-animation: opacity-greeting 2s linear;
+			-webkit-animation-fill-mode: forwards;
+
+			&:nth-child{
+				-webkit-animation-delay: 4s;
+			}
+			&:nth-child(2){
+				-webkit-animation-delay: 4.5s;
+			}
+			&:nth-child(3){
+				-webkit-animation-delay: 5s;
+			}
+		}
 	}
 
-	@-webkit-keyframes transforma {
+	@-webkit-keyframes transform-greeting {
 		0% {
-			-webkit-transform: translateX(0px);
+			-webkit-transform: translateX(0);
 		}
 		100% {
 			-webkit-transform: translateX(400px);
 		}
+
 	}
+
+	@-webkit-keyframes scale {
+		0% {
+			-webkit-transform: scale(0.8);
+		}
+		50% {
+			-webkit-transform: scale(0.9);
+		}
+		100% {
+			-webkit-transform: scale(1);
+		}
+
+	}
+
+	@-webkit-keyframes opacity-greeting {
+		0% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 1;
+		}
+
+	}
+
 }
 
 
